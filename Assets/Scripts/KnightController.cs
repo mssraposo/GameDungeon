@@ -30,7 +30,8 @@ public class KnightController : MonoBehaviour
         _h = Input.GetAxisRaw("Horizontal");
         _v = Input.GetAxisRaw("Vertical");
 
-        //Realiza o cálculo da velocidade que o Knight deverá se mover (direção * velocidade * ▲time) ▲time serve para que seja considerado metros por segundo e nao frames por segundo.
+        //Realiza o cálculo da velocidade que o Knight deverá se mover (direção * velocidade * ▲time) 
+        //   ▲time serve para que seja considerado metros por segundo e nao frames por segundo.
         _rb2dBody.velocity = new Vector2(_h * speed * Time.deltaTime, _v * speed * Time.deltaTime);
     }
 }
